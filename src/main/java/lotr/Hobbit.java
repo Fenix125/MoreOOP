@@ -8,5 +8,4 @@ public class Hobbit extends Character{
     public String toString() {
         return "Hobbit{hp="+getHp()+", power="+getPower()+"}";
     }
-
 }
