@@ -6,11 +6,15 @@ import lombok.Getter;
 public abstract class Character {
     private int power;
     private int hp;
-    public Character(int hp, int power){
+    private KickStrategy kickStrategy;
+    public Character(int hp, int power, KickStrategy kickStrat){
         this.hp = hp;
         this.power = power;
+        this.kickStrategy = kickStrat;
     }
-    public abstract void kick(Character c);
+    public void kick(Character c){
+        kickStrategy.kick(this, c);
+    }
     public boolean isAlive(){
         return hp > 0;
     }

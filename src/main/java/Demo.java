@@ -7,6 +7,7 @@ import lotr.CharacterFactory;
 
 public class Demo {
     public static void main(String args[]) {
-        
+        Character hcar = new Hobbit();
+        hcar.kick(hcar);
     }
 }
